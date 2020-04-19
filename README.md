@@ -10,6 +10,7 @@ Maven plugin that verifies the readiness of all dependencies in regard to the Ja
 Currently many libraries do not support Java modules. If you want to modularize your project, the libraries you depend on should 
 * provide an automatic module name
 * or have a module-info
+
 You can use this plugin to see which dependencies are compliant with this rule and which are not.
 
 ## Run the plugin
