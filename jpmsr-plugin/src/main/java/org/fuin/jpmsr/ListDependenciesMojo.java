@@ -113,7 +113,9 @@ public final class ListDependenciesMojo extends AbstractMojo {
             String line = null;
             while ((line = lnr.readLine()) != null) {
                 final String trimmed = line.trim();
-                if ((trimmed.length() > 0) && (!trimmed.equalsIgnoreCase("The following files have been resolved:"))) {
+                if ((trimmed.length() > 0) 
+                        && (!trimmed.equalsIgnoreCase("The following files have been resolved:"))
+                        && (!trimmed.contains("none"))) {
                     final String name = extractName(trimmed);
                     final String rest = trimmed.substring(name.length() + 1);
                     final int p = rest.indexOf(".jar");

@@ -55,6 +55,8 @@ public class ListDependenciesMojoTest {
 
         // TEST
         final Map<String, File> map = testee.dependencyMap(file);
+        
+        // VERIFY
         assertThat(map.get("org.jboss:jandex:jar:2.1.3.Final:compile"))
                 .isEqualTo(new File("/home/developer/.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar"));
         assertThat(map.get("jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile")).isEqualTo(
@@ -63,4 +65,19 @@ public class ListDependenciesMojoTest {
                 "/home/developer/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar"));
     }
 
+    @Test
+    public void testDependenciesNone() {
+
+        // PREPARE
+        final File file = new File(DIR, "dependencies-none.txt");
+        final ListDependenciesMojo testee = new ListDependenciesMojo();
+
+        // TEST
+        final Map<String, File> map = testee.dependencyMap(file);
+        
+        // VERIFY
+        assertThat(map).isEmpty();
+        
+    }
+    
 }
