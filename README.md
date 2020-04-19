@@ -1,6 +1,11 @@
 # jpms-readiness-maven-plugin
 Maven plugin that verifies the readiness of all dependencies in regard to the Java Platform Module System (JPMS)
 
+[![Build Status](https://jenkins.fuin.org/job/jpms-readiness-maven-plugin/badge/icon)](https://jenkins.fuin.org/job/jpms-readiness-maven-plugin/)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.fuin/jpms-readiness-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.fuin/jpms-readiness-maven-plugin/)
+[![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
+[![Java Development Kit 11](https://img.shields.io/badge/JDK-11-green.svg)](https://openjdk.java.net/projects/jdk/11/)
+
 ## Run the plugin
 Run the plugin in your project's root directory.
 
