@@ -80,4 +80,19 @@ public class ListDependenciesMojoTest {
         
     }
     
+    @Test
+    public void testDependencies3() {
+
+        // PREPARE
+        final File file = new File(DIR, "dependencies-3.txt");
+        final ListDependenciesMojo testee = new ListDependenciesMojo();
+
+        // TEST
+        final Map<String, File> map = testee.dependencyMap(file);
+        
+        // VERIFY
+        assertThat(map).isEmpty();
+        
+    }
+
 }

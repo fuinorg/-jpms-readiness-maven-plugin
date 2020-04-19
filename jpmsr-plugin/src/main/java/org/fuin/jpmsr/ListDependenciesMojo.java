@@ -119,8 +119,10 @@ public final class ListDependenciesMojo extends AbstractMojo {
                     final String name = extractName(trimmed);
                     final String rest = trimmed.substring(name.length() + 1);
                     final int p = rest.indexOf(".jar");
-                    final String filename = rest.substring(0, p + 4);
-                    map.put(name, new File(filename));
+                    if (p > -1) {
+                        final String filename = rest.substring(0, p + 4);
+                        map.put(name, new File(filename));
+                    }
                 }
             }
         } catch (final IOException ex) {
