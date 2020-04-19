@@ -11,7 +11,7 @@
 
     <groupId>org.fuin.jpmsr</groupId>
     <artifactId>jpmsr-parent</artifactId>
-    <version>0.2.1</version>
+    <version>0.2.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Maven plugin that provides UnixSystem values like UID or GID as project properties [PARENT].</description>
 

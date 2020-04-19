@@ -36,7 +36,7 @@
 			<plugin>
 				<groupId>org.fuin.jpmsr</groupId>
 				<artifactId>jpms-readiness-maven-plugin</artifactId>
-				<version>0.2.1</version>
+				<version>0.2.2-SNAPSHOT</version>
 				<configuration>
 					<scope>compile</scope>
 				</configuration>
