@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.fuin</groupId>
+        <artifactId>pom</artifactId>
+        <version>1.6.0</version>
+    </parent>
+
+    <groupId>org.fuin.jpmsr</groupId>
+    <artifactId>jpmsr-parent</artifactId>
+    <version>0.2.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>Maven plugin that provides UnixSystem values like UID or GID as project properties [PARENT].</description>
+
+    <scm>
+        <url>https://github.com/fuinorg/jpms-readiness-maven-plugin/</url>
+        <connection>scm:git:git://github.com/fuinorg/jpms-readiness-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:fuinorg/jpms-readiness-maven-plugin.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/fuinorg/jpms-readiness-maven-plugin/issues</url>
+    </issueManagement>
+
+    <modules>
+        <module>jpmsr-plugin</module>
+        <module>jpmsr-test</module>
+    </modules>
+
+</project>

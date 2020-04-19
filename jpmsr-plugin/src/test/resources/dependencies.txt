@@ -1,0 +1,6 @@
+
+The following files have been resolved:
+   org.jboss:jandex:jar:2.1.3.Final:compile:/home/developer/.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar (optional) [36m -- module org.jboss.jandex[0;1m [auto][m
+   jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile:/home/developer/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar (optional) [36m -- module java.xml.bind[m
+   jakarta.activation:jakarta.activation-api:jar:1.2.2:compile:/home/developer/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar[36m -- module jakarta.activation[m
+
