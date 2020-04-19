@@ -32,7 +32,6 @@ import java.io.LineNumberReader;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.StringTokenizer;
 
 import org.apache.maven.execution.MavenSession;
 import org.apache.maven.model.Plugin;
@@ -98,13 +97,11 @@ public final class ListDependenciesMojo extends AbstractMojo {
     }
 
     private String extractName(final String trimmed) {
-        final StringTokenizer tok = new StringTokenizer(trimmed, ":");
-        final String groupId = tok.nextToken();
-        final String artifactId = tok.nextToken();
-        final String type = tok.nextToken();
-        final String version = tok.nextToken();
-        final String scop = tok.nextToken();
-        return groupId + ":" + artifactId + ":" + type + ":" + version + ":" + scop;
+        final int p = trimmed.indexOf(":" + File.separator);
+        if (p == -1) {
+            return null;
+        }
+        return trimmed.substring(0, p);
     }
 
     Map<String, File> dependencyMap(final File txtFile) {
@@ -117,11 +114,15 @@ public final class ListDependenciesMojo extends AbstractMojo {
                         && (!trimmed.equalsIgnoreCase("The following files have been resolved:"))
                         && (!trimmed.contains("none"))) {
                     final String name = extractName(trimmed);
-                    final String rest = trimmed.substring(name.length() + 1);
-                    final int p = rest.indexOf(".jar");
-                    if (p > -1) {
-                        final String filename = rest.substring(0, p + 4);
-                        map.put(name, new File(filename));
+                    if (name == null) {
+                        LOG.error("Failed to extract name from: '{}'", trimmed);
+                    } else {
+                        final String rest = trimmed.substring(name.length() + 1);
+                        final int p = rest.indexOf(".jar");
+                        if (p > -1) {
+                            final String filename = rest.substring(0, p + 4);
+                            map.put(name, new File(filename));
+                        }
                     }
                 }
             }

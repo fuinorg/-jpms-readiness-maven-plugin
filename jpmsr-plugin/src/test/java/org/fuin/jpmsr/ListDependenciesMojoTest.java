@@ -55,7 +55,7 @@ public class ListDependenciesMojoTest {
 
         // TEST
         final Map<String, File> map = testee.dependencyMap(file);
-        
+
         // VERIFY
         assertThat(map.get("org.jboss:jandex:jar:2.1.3.Final:compile"))
                 .isEqualTo(new File("/home/developer/.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar"));
@@ -74,10 +74,26 @@ public class ListDependenciesMojoTest {
 
         // TEST
         final Map<String, File> map = testee.dependencyMap(file);
-        
+
         // VERIFY
         assertThat(map).isEmpty();
-        
+
     }
-    
+
+    @Test
+    public void testDependenciesAdditionalPart() {
+
+        // PREPARE
+        final File file = new File(DIR, "dependencies-addional-part.txt");
+        final ListDependenciesMojo testee = new ListDependenciesMojo();
+
+        // TEST
+        final Map<String, File> map = testee.dependencyMap(file);
+
+        // VERIFY
+        assertThat(map.get("com.google.inject:guice:jar:no_aop:4.2.1:compile"))
+                .isEqualTo(new File("/home/developer/.m2/repository/com/google/inject/guice/4.2.1/guice-4.2.1-no_aop.jar"));
+
+    }
+
 }
