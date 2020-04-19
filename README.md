@@ -6,6 +6,12 @@ Maven plugin that verifies the readiness of all dependencies in regard to the Ja
 [![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 [![Java Development Kit 11](https://img.shields.io/badge/JDK-11-green.svg)](https://openjdk.java.net/projects/jdk/11/)
 
+## Background
+Currently many libraries do not support Java modules. If you want to modularize your project, the libraries you depend on should 
+* provide an automatic module name
+* or have a module-info
+You can use this plugin to see which dependencies are compliant with this rule and which are not.
+
 ## Run the plugin
 Run the plugin in your project's root directory.
 
