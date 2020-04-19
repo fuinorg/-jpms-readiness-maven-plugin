@@ -18,11 +18,11 @@ Run the plugin in your project's root directory.
 
 Either using [Maven Wrapper](https://github.com/takari/maven-wrapper): 
 ```
-./mvnw org.fuin.jpmsr:jpms-readiness-maven-plugin:0.2.0-SNAPSHOT:verify
+./mvnw org.fuin.jpmsr:jpms-readiness-maven-plugin:0.2.0:verify
 ```
 Or the classic Maven installation: 
 ```
-mvn org.fuin.jpmsr:jpms-readiness-maven-plugin:0.2.0-SNAPSHOT:verify
+mvn org.fuin.jpmsr:jpms-readiness-maven-plugin:0.2.0:verify
 ```
 
 ## Example output
