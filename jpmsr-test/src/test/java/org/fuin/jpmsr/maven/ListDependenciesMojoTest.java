@@ -74,7 +74,7 @@ public class ListDependenciesMojoTest {
 
         // Check for resolved dependencies
         verifier.verifyTextInLog("Java Platform Module System (JPMS) Readiness:");
-        verifier.verifyTextInLog("org.jboss:jandex:jar:2.1.3.Final:compile");
+        verifier.verifyTextInLog("org.jboss:jandex:jar:2.4.2.Final:compile");
         verifier.verifyTextInLog("jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile");
         verifier.verifyTextInLog("jakarta.activation:jakarta.activation-api:jar:1.2.2:compile");
 

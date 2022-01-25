@@ -6,14 +6,14 @@
     <parent>
         <groupId>org.fuin</groupId>
         <artifactId>pom</artifactId>
-        <version>1.6.0</version>
+        <version>1.7.1</version>
     </parent>
 
     <groupId>org.fuin.jpmsr</groupId>
     <artifactId>jpmsr-parent</artifactId>
     <version>0.2.2-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <description>Maven plugin that provides UnixSystem values like UID or GID as project properties [PARENT].</description>
+    <description>Maven plugin that verifies the readiness of all dependencies in regard to the Java Platform Module System (JPMS)</description>
 
     <scm>
         <url>https://github.com/fuinorg/jpms-readiness-maven-plugin/</url>
